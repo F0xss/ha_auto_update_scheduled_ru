@@ -1895,7 +1895,7 @@ action:
           log_message: 'Система настроена на автоматический перезапуск, когда
             этого требует обновление. Перезапуск
 
-            Home Assistant ({{ input_restart_type }})...'
+            Home Assistant ({{ input_restart_type }})...
 
             '
       - *id001
@@ -1907,8 +1907,7 @@ action:
           seconds: 15
       - alias: Перезапуск — Вызов службы перезагрузки
         continue_on_error: true
-        action: '{{ "hassio.host_reboot" if input_restart_type == "host" else "homeassistant.restart"
-          }}'
+        action: '{{ "hassio.host_reboot" if input_restart_type == "host" else "homeassistant.restart"}}'
 - alias: Действия после обновления
   sequence:
   - variables:
