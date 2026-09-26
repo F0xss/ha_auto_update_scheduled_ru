@@ -1892,12 +1892,8 @@ action:
         - *id003
       else:
       - variables:
-          log_message: 'Система настроена на автоматический перезапуск, когда
-            этого требует обновление. Перезапуск
-
-            Home Assistant ({{ input_restart_type }})...
-
-            '
+          log_message: 'Система настроена на автоматический перезапуск, когда этого требует обновление.
+            Перезапуск Home Assistant ({{ input_restart_type }})...'
       - *id001
       - if: '{{ "restart" in input_notification_select_notifications }}'
         then:
